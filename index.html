@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css"/>
     <title>Quiz</title>
 </head>
 <body>
+    <!--This is the top header-->
+    <div>
+        <h3 id="scores">View Highscores</h3>
+    </div>
+
+    <div class="timer">
+        <div class="time_txt">Time:</div>
+        <div class="timer_sec">0</div>
+    </div>
     
+<!--This is the starting page-->
+    <div id="start-screen">
+        <h1 class="title">Coding Quiz Challenge</h1>
+        <p>This is a multiple-choice quiz on some of the coding content we have learned on HTML, CSS and JavaScript. This is a timed quiz and each incorrect answer will reduce your time by four seconds. </p>
+        <button>Start Quiz</button>
+    </div>
+<!-- Quiz Box -->
+    <section>
+        <div class="que_text">
+            <!-- Here I've inserted question from JavaScript -->
+        </div>
+        <div class="option_list">
+            <!-- Here I've inserted options from JavaScript -->
+        </div>
+    </section>
+<!--Final Page-->
+    <div>
+        <h2>All done!</h2>
+        <div>Your final score is: </div>
+        <div class="final-score">0</div>
+        <form action="Enter initials: ">
+            <input type="text">
+        </form>
+        <button>Submit</button>
+    </div>
+<script src="./assets/js/questions.js"></script>
+<script src="./assets/js/logic.js"></script>
+<script src="./assets/js/scores.js"></script>
 </body>
 </html>
