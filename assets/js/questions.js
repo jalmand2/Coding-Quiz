@@ -16,7 +16,7 @@ var questions = [
         "other arrays",
         "booleans",
         "all of the above",
-    ],
+        ],
         answer: "all of the above",
     },
     {
@@ -27,5 +27,6 @@ var questions = [
             "both A and B",
             "none of the above",
         ],
-    }
+        answer: "both A and B",
+    },
 ]

@@ -10,39 +10,41 @@
 <body>
     <!--This is the top header-->
     <div>
-        <h3 id="scores">View Highscores</h3>
+        <h3 id="scores" href="./assets/js/scores.js">View Highscores</h3>
     </div>
 
-    <div class="timer">
+    <span class="timer">
         <div class="time_txt">Time:</div>
         <div class="timer_sec">0</div>
-    </div>
+    </span>
     
 <!--This is the starting page-->
     <div id="start-screen">
         <h1 class="title">Coding Quiz Challenge</h1>
         <p>This is a multiple-choice quiz on some of the coding content we have learned on HTML, CSS and JavaScript. This is a timed quiz and each incorrect answer will reduce your time by four seconds. </p>
-        <button>Start Quiz</button>
+        <button id="action">Start Quiz</button>
     </div>
 <!-- Quiz Box -->
     <section>
-        <div class="que_text">
+        <div class="questions">
             <!-- Here I've inserted question from JavaScript -->
         </div>
-        <div class="option_list">
+        <div class="choices">
             <!-- Here I've inserted options from JavaScript -->
         </div>
     </section>
 <!--Final Page-->
-    <div>
+    <div id="final-screen" class="hide">
         <h2>All done!</h2>
-        <div>Your final score is: </div>
-        <div class="final-score">0</div>
-        <form action="Enter initials: ">
-            <input type="text">
-        </form>
-        <button>Submit</button>
+        <p>Your final score is: <span id="final-score"></span></p>
+    <p>
+        Enter initals: <input type= "text" id= "initials" max="3"/>
+    </p>
+        <button id="submit">Submit</button>
+        
+        <div id="feedback" class="feedback hide"></div>
     </div>
+    
 <script src="./assets/js/questions.js"></script>
 <script src="./assets/js/logic.js"></script>
 <script src="./assets/js/scores.js"></script>
