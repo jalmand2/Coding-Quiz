@@ -1,11 +1,15 @@
 // variables to keep track of quiz state
     // currentQuestion
+    var currentQuestion = ""
     // time
+    var timer;
     // timerId
-
+    var timerCount;
+    
 // variables to reference DOM elements
-var questionsEl = document.getElementById('questions');
-
+    var questionsEl = document.getElementById('questions');
+    var timerId = document.querySelector(".timer-sec");
+    var startButton = document.querySelector('#startButton');
 
 /// FUNCTION TO START THE QUIZ
 function startQuiz() {
@@ -14,10 +18,11 @@ function startQuiz() {
   // un-hide questions section
 
   // start timer
-
+  timerCount = 60;
   // show starting time
 
   getQuestion();
+  clockTick();
 }
 
 /// FUNCTION TO GET/SHOW EACH QUESTION ///
@@ -79,8 +84,14 @@ function quizEnd() {
 /// FUNCTION FOR UPDATING THE TIME ///
 function clockTick() {
   // update time
-
+  timerInterval = setInterval(function() {
+    timerCount--;
+    timerId.textContent = timerCount; 
   // check if user ran out of time
+  if (timerCount === 0) {
+    clearInterval(timerInterval);
+  }
+}, 1000);
 }
 
 function saveHighscore() {
@@ -100,5 +111,5 @@ function saveHighscore() {
   // user clicks button to submit initials
 
   // user clicks button to start quiz
-
+  startButton.addEventListener("click", startQuiz);
   // user clicks on element containing choices

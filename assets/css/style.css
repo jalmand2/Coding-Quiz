@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.timer {
+    display: flex;
+}
+h4 {
+    margin: 0px;
+    color: purple;
+}
+.timer-sec {
+    color: purple;
+    margin-left: 5px;
+}
+.quiz-start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#startButton {
+    background-color: purple;
+    color: white;
+}
+.hide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit {
+    margin-left: 10px;
+    background-color: purple;
+    color: white;
+}
