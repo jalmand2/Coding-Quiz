@@ -24,7 +24,7 @@ function startQuiz(event) {
   document.getElementById('questions').className = "show";
   // show starting time
   timerCount = 60;
-  // show functions to 
+  // call functions to start quiz
   getQuestion();
   clockTick();
 }
@@ -55,25 +55,18 @@ function getQuestion() {
 
 /// FUNCTION FOR CLICKING A QUESTION ///
 function questionClick(event) {
-  //event.stopPropagation();
   var element = event.target;
-  // if the clicked element is not a choice button, do nothing.
   if (element.matches("button") !== true) {
   }
-  else{
+  else {
       var questionValue = questions[currentQuestion];
-      // check if user guessed wrong
-      if(questionValue.answer !== questionValue.choices[element.getAttribute("data-index")]) {
-          // penalize time
-          if(timerCount > 10) {
+      if (questionValue.answer !== questionValue.choices[element.getAttribute("data-index")]) {
+          if (timerCount > 10) {
               timerCount-= 10;
-              // display new time on page
               document.getElementsByClassName("timer-sec").textContent = timerCount
-        
-          console.log("Incorrect! Try again!");
-          document.getElementById("feedback").textContent = "Incorrect!";
-          document.getElementById("feedback").className = "show";
-          
+              console.log("Incorrect! Try again!");
+              document.getElementById("feedback").textContent = "Incorrect!";
+              document.getElementById("feedback").className = "show";
         }
       }
       else {
@@ -81,10 +74,10 @@ function questionClick(event) {
           document.getElementById("feedback").textContent = "Correct!";
           document.getElementById("feedback").className = "show";
           currentQuestion++;
-          if(currentQuestion > 3){
+          if (currentQuestion > 3){
               quizEnd()
           }
-          else{
+          else {
               getQuestion();
           }
       }
@@ -114,6 +107,7 @@ function clockTick() {
   // check if user ran out of time
   if (timerCount === 0) {
     clearInterval(timerInterval);
+    quizEnd();
     }
   
   }, 1000);

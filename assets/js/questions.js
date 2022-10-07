@@ -24,9 +24,9 @@ var questions = [
         choices: [
             "single quotes", 
             "double quotes",
-            "both A and B",
+            "both 1 and 2",
             "none of the above",
         ],
-        answer: "both A and B",
+        answer: "both 1 and 2",
     },
 ]
