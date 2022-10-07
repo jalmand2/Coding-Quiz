@@ -70,7 +70,6 @@ function questionClick(event) {
               // display new time on page
               document.getElementsByClassName("timer-sec").textContent = timerCount
         
-          // give them feedback, letting them know it's wrong
           console.log("Incorrect! Try again!");
           document.getElementById("feedback").textContent = "Incorrect!";
           document.getElementById("feedback").className = "show";
@@ -79,10 +78,8 @@ function questionClick(event) {
       }
       else {
           console.log("Correct!");
-          // give them feedback, letting them know it's right
           document.getElementById("feedback").textContent = "Correct!";
           document.getElementById("feedback").className = "show";
-          // move to next question
           currentQuestion++;
           if(currentQuestion > 3){
               quizEnd()
