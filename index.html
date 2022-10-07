@@ -11,16 +11,18 @@
     <!--This is the top header-->
     <div class="header">
     <div>
-        <h4 id="scores" href="./assets/js/scores.js">View Highscores</h4>
+        <a href=""></a>
+         <h4 id="scores"><a href="./highscores.html">View Highscores</a></h4>
     </div>
 
     <span class="timer">
-        <div class="time-txt">Time:</div>
+        <div class="timeText">Time:</div>
         <div class="timer-sec">60</div>
     </span>
     </div>
-<!--This is the starting page-->
-    <div class= "quiz-start-screen" id="start-screen">
+
+    <!--This is the starting page-->
+    <div id= "startScreen" class = "start">
         <h1 class="title">Coding Quiz Challenge</h1>
         <p>This is a multiple-choice quiz on some of the coding content we have learned on HTML, CSS and JavaScript. This is a timed quiz and each incorrect answer will reduce your time by four seconds. </p>
         <button id="startButton">Start Quiz</button>
@@ -29,17 +31,20 @@
 
 <!-- Quiz Box -->
 
-</div>
-    <section>
+    <div id="questions" class = "hide">
         <div class="questions">
             <!-- Here I've inserted question from JavaScript -->
+            <h2 id="question-title"></h2>
+            <div id="choices" class="choices"></div>
         </div>
         <div class="choices">
             <!-- Here I've inserted options from JavaScript -->
         </div>
-    </section>
-<!--Final Page-->
-    <div id="final-screen" class="hide">
+        <div id = "feedback" class = "hide" ></div>
+    </div>
+
+    <!--Final Page-->
+    <div id = "finalScreen" class = "hide">
         <h2>All done!</h2>
         <p>Your final score is: <span id="final-score"></span></p>
     <p>
@@ -47,7 +52,7 @@
     </p>
         
         
-        <div id="feedback" class="feedback hide"></div>
+        
     </div>
  
 <script src="./assets/js/questions.js"></script>

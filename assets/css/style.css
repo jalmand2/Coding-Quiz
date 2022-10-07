@@ -11,15 +11,16 @@ h4 {
     margin: 0px;
     color: purple;
 }
+
+a {
+    text-decoration: none;
+}
+
 .timer-sec {
     color: purple;
     margin-left: 5px;
 }
-.quiz-start-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.start {
     text-align: center;
 }
 
@@ -28,10 +29,10 @@ h4 {
     color: white;
 }
 .hide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: none;
+}
+.show {
+    display: contents;
 }
 
 #submit {
